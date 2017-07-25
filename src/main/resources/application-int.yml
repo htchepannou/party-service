@@ -1,6 +1,7 @@
 spring:
   datasource:
-    driverClass: com.mysql.jdbc.Driver
-    url: mysql://tmaevjiwh40nhh0a@i943okdfa47xqzpy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/brireyucilfmzwsq
-    username: ofwl94crfwhvy2v0
-    password: tmaevjiwh40nhh0a
+    url: mysql://k.cwj11t2vidmo.us-east-1.rds.amazonaws.com:3306/k_party
+    username: kadmin
+    password: kadmin
+
+
