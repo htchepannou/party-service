@@ -24,6 +24,7 @@ swagger:
   email: "herve.tchepannou@gmail.com"
   licenceType: ""
   licencePath: "#"
+  protocol: http
 
 server:
   port: 8080
