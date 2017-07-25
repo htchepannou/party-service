@@ -24,9 +24,7 @@
 
 
         <commons-io.version>2.4</commons-io.version>
-        <httpclient.version>4.5.1</httpclient.version>
-        <mysql.version>5.1.34</mysql.version>
-        <opencsv.version>2.3</opencsv.version>
+        <flyway.version>4.2.0</flyway.version>
         <persistence-api.version>1.0.2</persistence-api.version>
         <springfox-swagger.version>2.3.1</springfox-swagger.version>
         <spring-data-jpa.version>1.10.5.RELEASE</spring-data-jpa.version>
@@ -43,6 +41,18 @@
             <version>${k-party-client.version}</version>
         </dependency>
 
+
+        <!-- ==== DATABASE ===== -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>${flyway.version}</version>
+        </dependency>
 
         <!-- ==== SPRING ==== -->
         <dependency>
@@ -69,29 +79,6 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${springfox-swagger.version}</version>
         </dependency>
-
-        <!-- === MISC === -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>net.sf.opencsv</groupId>
-            <artifactId>opencsv</artifactId>
-            <version>${opencsv.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>${httpclient.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>${commons-io.version}</version>
-        </dependency>
-
 
         <!-- TEST -->
         <dependency>
