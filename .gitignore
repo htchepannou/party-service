@@ -29,4 +29,3 @@ target/
 **/*.dump
 application.pid
 application.port
-/src/test/java/io/tchepannou/k/party/controller/PartyRoleControllerTest.java

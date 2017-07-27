@@ -9,8 +9,8 @@ import io.tchepannou.k.party.dao.PartyRoleTypeDao;
 import io.tchepannou.k.party.domain.Party;
 import io.tchepannou.k.party.domain.PartyRole;
 import io.tchepannou.k.party.domain.PartyRoleType;
-import io.tchepannou.k.party.exception.BusinessException;
 import io.tchepannou.k.party.exception.Error;
+import io.tchepannou.k.party.exception.InvalidRequestException;
 import io.tchepannou.k.party.exception.NotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,7 +49,7 @@ public class PartyRoleService {
         final String roleName = request.getRoleName();
         final PartyRoleType roleType = partyRoleTypeDao.findByName(roleName);
         if (roleType == null){
-            throw new BusinessException(Error.INVALID_ROLE_NAME);
+            throw new InvalidRequestException(Error.INVALID_ROLE_NAME);
         }
 
         PartyRole  role = new PartyRole();

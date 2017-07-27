@@ -43,7 +43,7 @@ logging:
   level:
     root: INFO
     com.amazonaws: ERROR
-    org.springframework: ERROR
+    org.springframework: INFO
     org.hibernate: ERROR
     org.hibernate.engine.jdbc.spi.SqlExceptionHelper: OFF
     springfox: ERROR
