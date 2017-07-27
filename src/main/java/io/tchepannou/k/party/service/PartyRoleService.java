@@ -47,7 +47,7 @@ public class PartyRoleService {
         }
 
         final String roleName = request.getRoleName();
-        final PartyRoleType roleType = partyRoleTypeDao.findByName(roleName);
+        final PartyRoleType roleType = partyRoleTypeDao.findByNameIgnoreCase(roleName);
         if (roleType == null){
             throw new InvalidRequestException(Error.INVALID_ROLE_NAME);
         }
@@ -82,7 +82,7 @@ public class PartyRoleService {
     }
 
     public GetPartyRoleResponse findRole(Integer partyId, String roleName){
-        final PartyRoleType roleType  = partyRoleTypeDao.findByName(roleName);
+        final PartyRoleType roleType  = partyRoleTypeDao.findByNameIgnoreCase(roleName);
         if (roleType == null){
             throw new NotFoundException(Error.INVALID_ROLE_NAME);
         }

@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PartyRoleTypeDao extends CrudRepository<PartyRoleType, Integer> {
-    PartyRoleType findByName(String name);
+    PartyRoleType findByNameIgnoreCase(String name);
 }

@@ -29,10 +29,6 @@ public class OrganizationController {
 
     @RequestMapping(path = "/organizations", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(value = "create", notes = "Create a new organization")
-    @ApiResponses({
-            @ApiResponse(code=200, message = "Success"),
-            @ApiResponse(code=409, message = "Failure", response = ErrorResponse.class),
-    })
     public CreateOrganizationResponse create(@RequestBody CreateOrganizationRequest request){
         return service.create(request);
     }
@@ -41,8 +37,7 @@ public class OrganizationController {
     @ApiOperation(value = "update", notes = "Update a new organization")
     @ApiResponses({
             @ApiResponse(code=200, message = "Success"),
-            @ApiResponse(code=404, message = "Organization not found", response = ErrorResponse.class),
-            @ApiResponse(code=409, message = "Failure", response = ErrorResponse.class),
+            @ApiResponse(code=404, message = "Organization not found", response = ErrorResponse.class)
     })
     public UpdateOrganizationResponse update(@PathVariable Integer id, @RequestBody UpdateOrganizationRequest request){
         return service.update(id, request);

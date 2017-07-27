@@ -30,8 +30,7 @@ public class PersonController {
     @RequestMapping(path = "/people", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(value = "create", notes = "Create a new person")
     @ApiResponses({
-            @ApiResponse(code=200, message = "Success"),
-            @ApiResponse(code=409, message = "Failure", response = ErrorResponse.class),
+            @ApiResponse(code=200, message = "Success")
     })
     public CreatePersonResponse create(@RequestBody CreatePersonRequest request){
         return service.create(request);
@@ -41,8 +40,7 @@ public class PersonController {
     @ApiOperation(value = "update", notes = "Update a new person")
     @ApiResponses({
             @ApiResponse(code=200, message = "Success"),
-            @ApiResponse(code=404, message = "Person not found", response = ErrorResponse.class),
-            @ApiResponse(code=409, message = "Failure", response = ErrorResponse.class),
+            @ApiResponse(code=404, message = "Person not found", response = ErrorResponse.class)
     })
     public UpdatePersonResponse update(@PathVariable Integer id, @RequestBody UpdatePersonRequest request){
         return service.update(id, request);
